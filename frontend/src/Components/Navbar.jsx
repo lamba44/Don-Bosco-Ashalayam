@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-scroll";
 import "./Styling/Navbar.css";
-// import logo from "../../assets/Misc/DVLogo.png";
+import logo from "../assets/navbarLogoSample.png";
 // Use Link from react-router-dom, take usage information from Footer.jsx of DV2, this is just for responsive styling of Navbar
 
 const Navbar = () => {
@@ -13,10 +12,7 @@ const Navbar = () => {
 
     return (
         <nav>
-            <Link to="hero" smooth={true} offset={0} duration={750}>
-                <h4>Logo Here</h4>
-                {/* <img src={logo} alt="Logo" className="logo" aria-label="home" /> */}
-            </Link>
+            <img src={logo} alt="Logo" className="logo" />
 
             <div className={`menu-icon`} onClick={toggleMenu}>
                 <i
@@ -29,7 +25,7 @@ const Navbar = () => {
                 <li>About</li>
                 <li>Programs</li>
                 <li>Gallery</li>
-                <li>Get Involved</li>
+                <li>Contact</li>
                 <li>
                     <button className="btn small">Donate Now</button>
                 </li>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Styling/Navbar.css";
 import logo from "../assets/navbarLogoSample.png";
-// Use Link from react-router-dom, take usage information from Footer.jsx of DV2, this is just for responsive styling of Navbar
+// Use Link from react-router-dom, take usage information from Footer.jsx of DV2, this is just for responsive styling of Navbar, also plan out the pages/sections
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);

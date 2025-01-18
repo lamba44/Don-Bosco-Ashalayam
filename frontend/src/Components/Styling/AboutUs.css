@@ -2,9 +2,21 @@
   padding: 64px;
 }
 
+.aboutus-quote {
+  text-align: center;
+  color: #000c7b;
+}
+
+.aboutus-quote-author {
+  text-align: center;
+  color: #000c7b;
+  font-size: 24px;
+}
+
 .aboutus-grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
+  margin-top: 64px;
 }
 
 .aboutus-grid-image-container {

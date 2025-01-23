@@ -1,12 +1,10 @@
 .section-contact {
   position: relative;
-  padding: 64px;
-  margin: 64px;
   background-image: url("../../assets/contactImg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
-  border-radius: 16px;
+  background-attachment: fixed;
 }
 
 .section-contact::before {

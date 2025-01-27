@@ -1,5 +1,4 @@
 .section-aim {
-  margin-top: 64px;
   padding: 64px;
 }
 
@@ -35,4 +34,10 @@
 .grid-desc {
   text-align: justify;
   line-height: 32px;
+}
+
+.section-aim h1 {
+  text-align: center;
+  margin-bottom: 32px;
+  color: #757780;
 }

@@ -4,7 +4,7 @@ import AboutUsImg from "../assets/about.jpg";
 
 const AboutUs = () => {
   return (
-    <div className="about-us">
+    <div className="about-us" id="about-us">
       <h2 className="aboutus-quote">
         "Service is the sign of true love, those who love know how to serve
         others"

@@ -1,7 +1,11 @@
 import React, { useState } from "react";
+import { Link as RouterLink } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import "./Styling/Navbar.css";
 import logo from "../assets/DonBoscoLogo.jpg";
-// Use Link from react-router-dom, take usage information from Footer.jsx of DV2, this is just for responsive styling of Navbar, also plan out the pages/sections
+import Programs from "../Pages/Programs";
+import Gallery from "../Pages/Gallery";
+import Events from "../Pages/Events";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,13 +23,29 @@ const Navbar = () => {
       </div>
 
       <ul className={`nav-links ${isOpen ? "open" : ""}`}>
-        <li>Home</li>
-        <li>About</li>
-        <li>Programs</li>
-        <li>Gallery</li>
+        <RouterLink to="/"></RouterLink>
+        <ScrollLink
+          to="about-us"
+          smooth={true}
+          duration={500}
+          offset={-70} // Adjust for fixed header
+        >
+          <li>About</li>
+        </ScrollLink>
+        <RouterLink to="/programs" element={<Programs />}>
+          <li>Programs</li>
+        </RouterLink>
+
+        <RouterLink to="/events" element={<Events />}>
+          <li>Events</li>
+        </RouterLink>
+
+        <RouterLink to="/gallery" element={<Gallery />}>
+          <li>Gallery</li>
+        </RouterLink>
         <li>Contact</li>
         <li>
-          <button className="btn small">Donate Now</button>
+          <button className="btn small">Contribute</button>
         </li>
       </ul>
     </nav>

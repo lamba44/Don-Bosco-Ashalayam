@@ -5,6 +5,7 @@ import AimData from "../assets/data/AimData.js";
 const Aim = () => {
   return (
     <div className="section-aim">
+      <h1>Our Aim</h1>
       <div className="aim-grid">
         {AimData.map((item, index) => (
           <div key={index} className="aim-grid-container">

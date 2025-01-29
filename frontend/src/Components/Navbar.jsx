@@ -6,6 +6,7 @@ import logo from "../assets/DonBoscoLogo.jpg";
 import Programs from "../Pages/Programs";
 import Gallery from "../Pages/Gallery";
 import Events from "../Pages/Events";
+import AboutUs from "./AboutUs";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,15 +24,18 @@ const Navbar = () => {
       </div>
 
       <ul className={`nav-links ${isOpen ? "open" : ""}`}>
-        <RouterLink to="/"></RouterLink>
-        <ScrollLink
-          to="about-us"
-          smooth={true}
-          duration={500}
-          offset={-70} // Adjust for fixed header
-        >
-          <li>About</li>
-        </ScrollLink>
+        <RouterLink to="/" element={<AboutUs />}>
+          {" "}
+          {/*This is not working idk why*/}
+          <ScrollLink
+            to="about-us"
+            smooth={true}
+            duration={500}
+            offset={-70} // Adjust for fixed header
+          >
+            <li>About</li>
+          </ScrollLink>
+        </RouterLink>
         <RouterLink to="/programs" element={<Programs />}>
           <li>Programs</li>
         </RouterLink>

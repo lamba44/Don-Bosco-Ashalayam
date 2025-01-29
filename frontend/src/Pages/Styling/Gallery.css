@@ -1,59 +1,72 @@
 .gallerybento {
-    width: 100%;
-    height: 900px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-
-    margin-top: 32px;
-    margin-bottom: 32px;
+  width: 100%;
+  height: 900px; /* or adjust based on your design */
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 32px;
+  margin-bottom: 32px;
 }
 
 .bentotop {
-    flex: 1;
-    display: flex;
-    gap: 32px;
+  flex: 1;
+  display: flex;
+  gap: 32px;
 }
 
 .bentotopright {
-    flex: 3;
-    display: flex;
-    gap: 32px;
+  flex: 3;
+  display: flex;
+  gap: 32px;
 }
 
 .bento1,
 .bento2,
+.bento3,
 .bento4,
+.bento5,
 .bento6,
+.bento7,
 .bento8 {
-    flex: 1;
+  flex: 1;
+  position: relative;
+  overflow: hidden; /* Ensures images are clipped to the box */
+  border-radius: 16px;
+  height: 300px; /* Fixed height for Bento containers */
 }
 
-.bento3,
-.bento5,
-.bento7 {
-    flex: 2;
+.bento1 img,
+.bento2 img,
+.bento3 img,
+.bento4 img,
+.bento5 img,
+.bento6 img,
+.bento7 img,
+.bento8 img {
+  width: 100%; /* Ensure the image takes full width */
+  height: 100%; /* Ensure the image takes full height */
+  object-fit: cover; /* Ensures the image covers the area of the Bento box without distortion */
+  transition: opacity 1s ease-in-out; /* Smooth transition for fade-in/out */
 }
 
 .bentobot {
-    flex: 2;
-    display: flex;
-    gap: 32px;
+  flex: 2;
+  display: flex;
+  gap: 32px;
 }
 
 .subbento {
-    flex: 3;
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .subbentotop,
 .subbentobot {
-    flex: 1;
-    display: flex;
-    gap: 32px;
+  flex: 1;
+  display: flex;
+  gap: 32px;
 }
 
 /* TEMP STYLING FOR EASIER CODING, REMOVE WHEN PLACING IMAGES */
@@ -65,64 +78,62 @@
 .bento6,
 .bento7,
 .bento8 {
-    background-color: #87ceeb;
-    border-radius: 16px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 32px;
-    font-weight: 700;
+  background-color: #87ceeb;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 700;
 }
 
 @media (max-width: 1024px) {
-    .gallerybento {
-        height: 700px;
-    }
+  .gallerybento {
+    height: 700px;
+  }
 }
 
 @media (max-width: 840px) {
-    .gallerybento {
-        height: 550px;
-    }
+  .gallerybento {
+    height: 550px;
+  }
 
-    .gallerybento,
-    .bentotop,
-    .bentotopright,
-    .bentobot,
-    .subbento,
-    .subbentotop,
-    .subbentobot {
-        gap: 12px;
-    }
+  .gallerybento,
+  .bentotop,
+  .bentotopright,
+  .bentobot,
+  .subbento,
+  .subbentotop,
+  .subbentobot {
+    gap: 12px;
+  }
 }
 
 @media (max-width: 670px) {
-    .gallerybento {
-        height: 500px;
-    }
+  .gallerybento {
+    height: 500px;
+  }
 }
 
 @media (max-width: 512px) {
-    .bento1,
-    .bento4 {
-        display: none;
-    }
+  .bento1,
+  .bento4 {
+    display: none;
+  }
 
-    .bento3,
-    .bento5,
-    .bento7 {
-        flex: 1;
-    }
+  .bento3,
+  .bento5,
+  .bento7 {
+    flex: 1;
+  }
 
-    .gallerybento {
-        height: 1350px;
-    }
+  .gallerybento {
+    height: 1350px;
+  }
 
-    .bentotopright,
-    .subbentotop,
-    .subbentobot {
-        flex-direction: column;
-    }
+  .bentotopright,
+  .subbentotop,
+  .subbentobot {
+    flex-direction: column;
+  }
 }
